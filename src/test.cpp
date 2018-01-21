@@ -17,20 +17,19 @@ int main(){
   while(true)
   {
     system("cls");
-    cout<<"1.Faktoriel Hesaplama"<<endl;
-    cout<<"2.Cikis"<<endl;
-    cout<<"Seciminiz: ";
+    cout<<"1.Calculates_factorial"<<endl;
+    cout<<"2.Exit"<<endl;
+    cout<<"Your_choice: ";
     cin>>secim;
 
     if(secim==1)
     {
-      cout<<"Faktorielini almak istediginiz sayini giriniz:";
+      cout<<"Enter the number you want to calculate:";
       cin>>sayi1;
 
       if(sayi1==0)
       {
         cout<<sayi1<<"!="<<1<<endl;
-        cout<<"Devam Etmek Icin bit tusa basin";
         cin.ignore();
         cin.get();
         continue;
@@ -38,18 +37,16 @@ int main(){
       say=clock();
       sayi->Faktoriel(sayi1);
       dur=clock();
-      cout<<"Hesaplama suresi : "<<(double)(dur-say)/CLOCKS_PER_SEC*1000000000<<" nanosaniye"<<endl;
-      cout<<"Devam etmek icin tusa basin";
+      cout<<"Calculation_time : "<<(double)(dur-say)/CLOCKS_PER_SEC*1000000000<<" nanoseconds"<<endl;
     }
     else if(secim==2)
     {
-      cout<<"Cikis yaptiniz";
+      cout<<"You_logged_out";
       break;
     }
     else
     {
-      cout<<"Hatali Secim"<<endl;
-      cout<<"Devam Etmek Icin bit tusa basin";
+      cout<<"Incorrect_choice"<<endl;
     }
     cout<<endl;
     system("pause");
